@@ -1,0 +1,1602 @@
+<!DOCTYPE html>
+
+
+<html>
+	<head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<title>UI.Tests Test Execution Report</title>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+        <script type="text/javascript">
+            /**
+            * jQuery.fn.sortElements
+            * --------------
+            * #author James Padolsey (http://james.padolsey.com)
+            * #version 0.11
+            * #updated 18-MAR-2010
+            * #url https://raw.github.com/jamespadolsey/jQuery-Plugins/master/sortElements/jquery.sortElements.js
+            * --------------
+            * #param Function comparator:
+            *   Exactly the same behaviour as [1,2,3].sort(comparator)
+            *   
+            * #param Function getSortable
+            *   A function that should return the element that is
+            *   to be sorted. The comparator will run on the
+            *   current collection, but you may want the actual
+            *   resulting sort to occur on a parent or another
+            *   associated element.
+            *   
+            *   E.g. $('td').sortElements(comparator, function(){
+            *      return this.parentNode; 
+            *   })
+            *   
+            *   The <td>'s parent (<tr>) will be sorted instead
+            *   of the <td> itself.
+            */
+            jQuery.fn.sortElements = (function () {
+
+                var sort = [].sort;
+
+                return function (comparator, getSortable) {
+
+                    getSortable = getSortable || function () { return this; };
+
+                    var placements = this.map(function () {
+
+                        var sortElement = getSortable.call(this),
+                parentNode = sortElement.parentNode,
+
+                        // Since the element itself will change position, we have
+                        // to have some way of storing it's original position in
+                        // the DOM. The easiest way is to have a 'flag' node:
+                nextSibling = parentNode.insertBefore(
+                    document.createTextNode(''),
+                    sortElement.nextSibling
+                );
+
+                        return function () {
+
+                            if (parentNode === this) {
+                                throw new Error(
+                        "You can't sort elements if any one is a descendant of another."
+                    );
+                            }
+
+                            // Insert before flag:
+                            parentNode.insertBefore(this, nextSibling);
+                            // Remove flag:
+                            parentNode.removeChild(nextSibling);
+
+                        };
+
+                    });
+
+                    return sort.call(this, comparator).each(function (i) {
+                        placements[i].call(getSortable.call(this));
+                    });
+
+                };
+
+            })();
+        </script>
+        <script type="text/javascript">
+            jQuery.fn.setBarSizes = (function () {
+                return function (metricName, maxBarSize, min) {
+                    var max = Math.max.apply(Math, $.makeArray($(this).map(function () { return Number($(this).attr('data-sr-' + metricName)); })));
+                    var scale = 1.0;
+                    while (max > 0.0 && max <= 10.0) {
+                        scale = scale * 10.0;
+                        max = max * 10.0;
+                    }
+                    max = (Math.ceil(max / 2) * 2) / scale;
+
+                    this.each(function () {
+                        var barAnchor = $(this).find('a');
+                        var actual = $(this).attr('data-sr-' + metricName);
+                        var newHeight = Math.max(Math.round(maxBarSize * (actual - min) / (max - min)), 2);
+                        barAnchor.css({ height: newHeight });
+                    });
+
+                    var unit = "";
+                    if (metricName.substr(metricName.length - 4, 4) === "time")
+                        unit = "s";
+
+                    $('#testview .scale-min-label').each(function () {
+                        $(this).text(min.toString() + unit);
+                    });
+                    $('#testview .scale-max-label').each(function () {
+                        $(this).text(max.toString() + unit);
+                    });
+                    var mid = max / 2;
+                    $('#testview .scale-mid-label').each(function () {
+                        $(this).text(mid.toString() + unit);
+                    });
+                };
+            })();
+
+            function getComparer(metricName, isDesc) {
+                return function (a, b) {
+                    var aNumber = Number($(a).attr('data-sr-' + metricName));
+                    var bNumber = Number($(b).attr('data-sr-' + metricName));
+                    var result = aNumber > bNumber ? 1 : (aNumber < bNumber ? -1 : 0);
+                    if (isDesc)
+                        result = -1 * result;
+
+                    if (result == 0 && metricName != "order")
+                        result = getComparer("order", false)(a, b);
+
+                    return result;
+                };
+            }
+
+            var currentSort = "";
+            function doSort(allowToggleDesc) {
+                var newSort = $("input[name='barSortOrder']:checked").val();
+                if (allowToggleDesc && currentSort == newSort) {
+                    $('#barSortDesc').click();
+                    doSort(false);
+                    return;
+                }
+                currentSort = newSort;
+                $('#testview td.testview-item').sortElements(getComparer(newSort, $('#barSortDesc').is(':checked')));
+            }
+
+
+            function doSetHeights(allowSort) {
+                var selectedMetric = $("input[name='barHeight']:checked").val();
+                $('#testview td.testview-item').setBarSizes(selectedMetric, 60, 0.0);
+
+                if (allowSort && currentSort != selectedMetric) {
+                    var $radios = $("input[name='barSortOrder']");
+                    $radios.filter('[value=' + selectedMetric + ']').attr('checked', true);
+                    $("#barSortDesc").attr("checked", [true]);
+                    doSort(false);
+                }
+            }
+
+            $(document).ready(function () {
+                $("input[name='barSortOrder']").click(function () { doSort(true); return true; });
+                $("input[name='barSortDesc']").change(function () { doSort(false); });
+                $("input[name='barHeight']").change(function () { doSetHeights(true); });
+
+                doSort(false);
+                doSetHeights(false);
+
+                $("div.scrollable").css({ 'overflow': 'auto' });
+            });
+        </script>
+
+        <style type="text/css">
+            body 
+            {
+                color: #000000;
+                font-family: Arial,Liberation Sans,DejaVu Sans,sans-serif;
+                line-height: 130%;
+            }
+            h1 {
+                font-family: Trebuchet MS,Liberation Sans,DejaVu Sans,sans-serif;
+                font-size: 170%;
+                font-weight: bold;
+            }            
+            h2 {
+                font-family: Trebuchet MS,Liberation Sans,DejaVu Sans,sans-serif;
+                font-size: 130%;
+                font-weight: bold;
+                margin-bottom: 5px;
+            }            
+            h3 {
+                font-family: Trebuchet MS,Liberation Sans,DejaVu Sans,sans-serif;
+                font-size: 120%;
+                font-weight: bold;
+                margin-bottom: 5px;
+            }            
+            a.bar
+            {
+                text-decoration: none;
+                display: block;
+                line-height: 1px;
+            }
+            .description
+            {
+                font-style: italic;
+            }
+            .log 
+            {
+                width: 600px;
+                white-space: pre-wrap;
+                display: block;
+                margin: 0px;
+            }
+            .errorMessage 
+            {
+                width: 600px;
+                color: Red;
+                font-weight: bold;
+            }
+            .stackTrace 
+            {
+                width: 600px;
+                white-space: pre-wrap;
+                font-style: italic;
+                color: Red;
+                display: block;
+            }
+            table.testEvents
+            {
+                border: solid 1px #e8eef4;
+                border-collapse: collapse;
+            }
+            table.testEvents td
+            {
+                vertical-align: top;
+                padding: 5px;
+                border: solid 1px #e8eef4;
+            }
+            table.testEvents th
+            {
+                padding: 6px 5px;
+                text-align: left;
+                background-color: #e8eef4;
+                border: solid 1px #e8eef4;                
+            }
+            .comment
+            {
+                font-style: italic;
+                font-size: smaller;
+            }
+            .startupBar
+            {
+                background-color: #EEEEEE;
+                cursor: default;
+            }
+            
+            .colorSucceeded
+            {
+                background-color: #90ED7B;
+            }
+            .colorIgnored
+            {
+                background-color: #FFFF85;
+            }
+            .colorPending
+            {
+                background-color: #D47BED;
+            }
+            .colorNothingToRun
+            {
+                background-color: #CCCCFF;
+            }
+            .colorSkipped
+            {
+                background-color: #CCCCFF;
+            }
+            .colorInconclusive
+            {
+                background-color: #7BEDED;
+            }
+            .colorCleanupFailed
+            {
+                background-color: #FFCCCC;
+            }
+            .colorRandomlyFailed
+            {
+                background-color: #EDB07B;
+            }
+            .colorFailed
+            {
+                background-color: #ED5F5F;
+            }
+            .colorInitializationFailed
+            {
+                background-color: #FF0000;
+            }
+            .colorFrameworkError
+            {
+                background-color: #FF0000;
+            }
+            ul.subNodeLinks
+            {
+                padding-left: 20px;
+                margin: 0px;
+            }
+            ul.subNodeLinks li
+            {
+                list-style: none;
+            }
+            
+            /* views general */
+            div.scrollable
+            {
+                /*overflow: auto; - thsi has to be set from js, because of an IE9 bug */
+            }
+            div.viewbox
+            {
+                position: relative;
+                border: 3px solid #e8eef4;
+            }
+            div.viewbox table
+            {
+                border: 0px;
+            }
+                        
+            /* testview */
+            #testview
+            {
+                padding-top: 23px;
+            }
+            
+            table.testview-items td
+            {
+                vertical-align: bottom;
+                padding: 0px 1px 0px 1px;
+            }
+            td.right-padding, td.left-padding
+            {
+                width: 25px;
+                min-width: 25px;
+            }
+            table.testview-items a.bar
+            {
+                width: 5px;
+            }
+            table.testview-items tr.testview-items-row
+            {
+                height: 60px;
+            }
+            
+            /* scale */
+            table.vertical-scale 
+            {
+                position: absolute;
+                top: 23px;
+                left: 0px;
+                width: 100%;
+                z-index: -100;
+            }
+            table.vertical-scale td, tr.horizontal-scale td
+            {
+                font-size: 60%;
+                line-height: normal;
+            }
+            table.vertical-scale tr.scale-max, table.vertical-scale tr.scale-mid 
+            {
+                height: 30px;
+            }
+            tr.horizontal-scale, table.vertical-scale tr.scale-min 
+            {
+                height: 12px;
+            }
+            
+            td.scale-max-label, td.scale-mid-label, td.scale-min-label
+            {
+                border-top: solid 1px #E6E6E6;
+                text-align: left;
+                vertical-align: top;
+            }
+            td.scale-10-label
+            {
+                border-left: solid 1px #E6E6E6;
+                text-align: left;
+                vertical-align: bottom;
+                padding-left: 1px;
+            }
+            tr.scale-mid td, tr.scale-min td, tr.scale-max td
+            {
+                border-top: solid 1px #E6E6E6;
+            }
+           
+            
+            /* bar-control */
+            #bar-control
+            {
+                font-size: 60%;
+                line-height: normal;
+                position: absolute;
+                right: 0px;
+                top: 0px;
+            }
+            #bar-control label
+            {
+                font-weight: bold;
+                vertical-align: middle;
+            }
+            #bar-control .option
+            {
+                vertical-align: middle;
+                text-transform: lowercase;
+            }
+            #bar-control input[type="checkbox"]
+            {
+                padding: 0 2px 0 3px;
+            }
+            #bar-control input
+            {
+                vertical-align: top;
+                height: 12px;
+                margin: 0px;
+                padding: 0px;
+            }
+            #bar-control div
+            {
+                float: right;
+                margin: 3px 5px 3px 5px;
+            }
+            
+            
+            /* timeline view */
+            #timelineview
+            {
+                padding-top: 5px;
+            }
+            table.timelineview a
+            {
+                height: 20px;
+            }
+            table.timelineview td
+            {
+                vertical-align: bottom;
+                padding: 0px 1px 0px 0px;
+                border: 0px;
+            }
+            tr.thread-items-row
+            {
+                height: 25px;
+            }
+            tr.thread-items-row td
+            {
+                vertical-align: bottom;
+            }
+            td.thread-label
+            {
+                padding: 0px 6px 0px 6px;
+                text-align: right;
+                line-height: 18px;
+                vertical-align: bottom;
+            }
+            th.thread-label
+            {
+                padding: 3px 6px 0px 6px;
+                line-height: 18px;
+                text-align: left;
+                vertical-align: bottom;
+            }
+        </style>
+	</head>
+	<body>
+        <h1>UI.Tests Test Execution Report</h1>
+        <ul>
+            <li>Project: UI.Tests</li>
+            <li>Configuration: Default</li>
+            <li>Test Assemblies: UI.Tests.dll</li>
+            <li>Start Time: 09/07/2018 10:01:37</li>
+            <li>Duration: 00:01:30.5831066</li>
+            <li>Test Threads: 1</li>
+        </ul>
+
+        <h2>Result: 1 failed</h2>
+        <table class="testEvents">
+                <tr>
+        <th colspan="2">Success rate</th>
+        <th>Tests</th>
+        <th>Succeeded</th>
+        <th>Failed</th>
+        <th>Pending</th>
+        <th>Ignored</th>
+        <th>Skipped</th>
+    </tr>
+
+                <tr>
+            <td>
+            86%
+    </td>
+    <td>
+        <table class="timelineview" cellpadding="0" cellspacing="0">
+            <tr>
+                    <td>
+                        <a class="bar colorSucceeded" 
+                           style="width: 170px;" 
+                           title="6 succeeded" 
+                                                   />
+                    </td>
+                    <td>
+                        <a class="bar colorFailed" 
+                           style="width: 28px;" 
+                           title="1 failed" 
+                                                          href="#error_summary"
+                        />
+                    </td>
+            </tr>
+            
+        </table>
+    </td>
+    <td>7</td>
+    <td>6</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+
+    </tr>
+
+        </table>
+        
+        <h2>Test Timeline Summary</h2>
+
+        <div id="timelineview" class="viewbox">
+            <div class="scrollable">
+                <table cellpadding="0" cellspacing="0">
+                    <tr>
+                        <th class="thread-label" colspan="2">thread</th>
+                    </tr>
+                        <tr class="thread-items-row">
+                            <td class="thread-label" title="Machine: WIN-HVIMG0PLS9U">#0</td>
+                            <td colspan="1">
+                                <table class="timelineview" cellpadding="0" cellspacing="0">
+                                    <tr>
+
+                                            <td>
+        <a
+            class="bar startupBar" 
+            style="width: 3px;" 
+                title="test thread startup" 
+        >&nbsp;</a>
+    </td>
+
+    <td>
+        <a
+            class="bar colorSucceeded" 
+            style="width: 6px;" 
+                title="Divide Two Numbers at UI level, Number is positive, 18 (in CalculatorFeature)" 
+                href="#t1736698513.0"
+        >&nbsp;</a>
+    </td>
+    <td>
+        <a
+            class="bar colorSucceeded" 
+            style="width: 5px;" 
+                title="Divide Two Numbers at UI level, Number is positive, 32.60 (in CalculatorFeature)" 
+                href="#t-1465947259.0"
+        >&nbsp;</a>
+    </td>
+    <td>
+        <a
+            class="bar colorSucceeded" 
+            style="width: 6px;" 
+                title="Divide Two Numbers at UI level, Number is positive, 10.45 (in CalculatorFeature)" 
+                href="#t1092053826.0"
+        >&nbsp;</a>
+    </td>
+    <td>
+        <a
+            class="bar colorSucceeded" 
+            style="width: 5px;" 
+                title="Divide Two Numbers at UI level, Number is negative, 0 (in CalculatorFeature)" 
+                href="#t-858346488.0"
+        >&nbsp;</a>
+    </td>
+    <td>
+        <a
+            class="bar colorSucceeded" 
+            style="width: 5px;" 
+                title="Divide Two Numbers at UI level, Number is negative, A (in CalculatorFeature)" 
+                href="#t-858346425.0"
+        >&nbsp;</a>
+    </td>
+    <td>
+        <a
+            class="bar colorSucceeded" 
+            style="width: 6px;" 
+                title="Divide Two Numbers at UI level, Number is negative, -1 (in CalculatorFeature)" 
+                href="#t-857232341.0"
+        >&nbsp;</a>
+    </td>
+    <td>
+        <a
+            class="bar colorFailed" 
+            style="width: 5px;" 
+                title="Divide Two Numbers at Api level, Number is positive, 24 (in CalculatorFeature)" 
+                href="#t637774988.0"
+        >&nbsp;</a>
+    </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    <tr class="horizontal-scale">
+                        <td>&nbsp;</td>
+                        <td class="scale-10-label">0s</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <h2>Test Result View</h2>
+        <div id="testview" class="viewbox">
+            <div id="bar-control">
+                <div id="bar-control-sort">
+                    <label>sort by:</label>
+                    <span class="option"><input type="radio" name="barSortOrder" value="exectime" />Time</span>
+                    <span class="option"><input type="radio" name="barSortOrder" value="acttime" />Act Time</span>
+                    <span class="option"><input type="radio" name="barSortOrder" value="order" />Execution</span>
+                    <span class="option"><input type="radio" name="barSortOrder" value="rescode" checked="checked" />Result</span>
+                    <span class="option"><input type="checkbox" name="barSortDesc" id="barSortDesc" checked="checked" />desc</span>
+                </div>
+                <div id="bar-control-heights">
+                    <label>heights:</label>
+                    <span class="option"><input type="radio" checked="checked" name="barHeight" value="exectime" />Time</span>
+                    <span class="option"><input type="radio" name="barHeight" value="acttime" />Act Time</span>
+                    
+                </div>
+            </div>
+            <table class="vertical-scale" cellpadding="0" cellspacing="0">
+                <tr class="scale-max">
+                    <td class="left-padding scale-max-label">&nbsp;</td>
+                    <td colspan="7">&nbsp;</td>
+                    <td class="right-padding">&nbsp;</td>
+                </tr>
+                <tr class="scale-mid">
+                    <td class="left-padding scale-mid-label">&nbsp;</td>
+                    <td colspan="7">&nbsp;</td>
+                    <td class="right-padding">&nbsp;</td>
+                </tr>
+                <tr class="scale-min">
+                    <td class="left-padding scale-min-label">&nbsp;</td>
+                    <td colspan="7">&nbsp;</td>
+                    <td class="right-padding">&nbsp;</td>
+                </tr>
+            </table>
+            <div class="scrollable">
+                <table class="testview-items" cellpadding="0" cellspacing="0">
+                    <tr class="testview-items-row">
+                        <td class="left-padding">&nbsp;</td>
+    <td class="testview-item" 
+        data-sr-exectime="16.4910093" data-sr-rescode="110" data-sr-order="0" data-sr-acttime="1.055">
+        <a
+            class="bar colorSucceeded" 
+            style="height: 60px;"
+            title="Divide Two Numbers at UI level, Number is positive, 18 (in CalculatorFeature)"
+            href="#t1736698513.0">&nbsp;</a>
+    </td>
+    <td class="testview-item" 
+        data-sr-exectime="11.1149768" data-sr-rescode="110" data-sr-order="1" data-sr-acttime="0.967">
+        <a
+            class="bar colorSucceeded" 
+            style="height: 40px;"
+            title="Divide Two Numbers at UI level, Number is positive, 32.60 (in CalculatorFeature)"
+            href="#t-1465947259.0">&nbsp;</a>
+    </td>
+    <td class="testview-item" 
+        data-sr-exectime="12.0476149" data-sr-rescode="110" data-sr-order="2" data-sr-acttime="1.017">
+        <a
+            class="bar colorSucceeded" 
+            style="height: 44px;"
+            title="Divide Two Numbers at UI level, Number is positive, 10.45 (in CalculatorFeature)"
+            href="#t1092053826.0">&nbsp;</a>
+    </td>
+    <td class="testview-item" 
+        data-sr-exectime="11.0381779" data-sr-rescode="110" data-sr-order="3" data-sr-acttime="0.974">
+        <a
+            class="bar colorSucceeded" 
+            style="height: 40px;"
+            title="Divide Two Numbers at UI level, Number is negative, 0 (in CalculatorFeature)"
+            href="#t-858346488.0">&nbsp;</a>
+    </td>
+    <td class="testview-item" 
+        data-sr-exectime="11.2393311" data-sr-rescode="110" data-sr-order="4" data-sr-acttime="1.065">
+        <a
+            class="bar colorSucceeded" 
+            style="height: 41px;"
+            title="Divide Two Numbers at UI level, Number is negative, A (in CalculatorFeature)"
+            href="#t-858346425.0">&nbsp;</a>
+    </td>
+    <td class="testview-item" 
+        data-sr-exectime="13.4593274" data-sr-rescode="110" data-sr-order="5" data-sr-acttime="1.027">
+        <a
+            class="bar colorSucceeded" 
+            style="height: 49px;"
+            title="Divide Two Numbers at UI level, Number is negative, -1 (in CalculatorFeature)"
+            href="#t-857232341.0">&nbsp;</a>
+    </td>
+    <td class="testview-item" 
+        data-sr-exectime="11.0094023" data-sr-rescode="440" data-sr-order="6" data-sr-acttime="0.569">
+        <a
+            class="bar colorFailed" 
+            style="height: 40px;"
+            title="Divide Two Numbers at Api level, Number is positive, 24 (in CalculatorFeature)"
+            href="#t637774988.0">&nbsp;</a>
+    </td>
+                        <td class="right-padding">&nbsp;</td>
+                    </tr>
+                    <tr class="horizontal-scale">
+                        <td class="left-padding">&nbsp;</td>
+                        <td colspan="10">&nbsp;</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <h2>Feature Summary</h2>
+        <table class="testEvents">
+                <tr>
+            <th>Feature</th>
+        <th colspan="2">Success rate</th>
+        <th>Tests</th>
+        <th>Succeeded</th>
+        <th>Failed</th>
+        <th>Pending</th>
+        <th>Ignored</th>
+        <th>Skipped</th>
+            <th>Duration</th>
+    </tr>
+
+    <tr>
+            <td><a href="#f-1433286633">CalculatorFeature (target: Chrome)</a></td>
+            <td>
+            86%
+    </td>
+    <td>
+        <table class="timelineview" cellpadding="0" cellspacing="0">
+            <tr>
+                    <td>
+                        <a class="bar colorSucceeded" 
+                           style="width: 170px;" 
+                           title="6 succeeded" 
+                                                   />
+                    </td>
+                    <td>
+                        <a class="bar colorFailed" 
+                           style="width: 28px;" 
+                           title="1 failed" 
+                                                          href="#error_summary"
+                        />
+                    </td>
+            </tr>
+            
+        </table>
+    </td>
+    <td>7</td>
+    <td>6</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+        <td>00:01:26.3998397</td>
+
+    </tr>
+        </table>
+
+        <a name="error_summary" />
+        <h2>Error Summary</h2>
+        <table class="testEvents">
+                <tr>
+            <th>Test</th>
+        <th colspan="2">Success rate</th>
+        <th>Tests</th>
+        <th>Succeeded</th>
+        <th>Failed</th>
+        <th>Pending</th>
+        <th>Ignored</th>
+        <th>Skipped</th>
+    </tr>
+
+                <tr>
+                    <td>
+                        <a href="#t637774988.0">Divide Two Numbers at Api level, Number is positive, 24 (in UI.Tests, CalculatorFeature)</a>
+                    </td>
+                        <td>
+            0%
+    </td>
+    <td>
+        <table class="timelineview" cellpadding="0" cellspacing="0">
+            <tr>
+                    <td>
+                        <a class="bar colorFailed" 
+                           style="width: 199px;" 
+                           title="1 failed" 
+                                                          href="#error_summary"
+                        />
+                    </td>
+            </tr>
+            
+        </table>
+    </td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+
+                </tr>
+                <tr>
+                    <td colspan="9" style="padding-left: 20px;"><div class="errorMessage">Error: Object reference not set to an instance of an object.</div></td>
+                </tr>
+        </table>
+
+        <h2>Scenario Summary</h2>
+            <a name="f-1433286633" />
+            <h3>Feature: CalculatorFeature (target: Chrome)</h3>
+                <div class="description"><pre>	 In order to avoid silly mistakes 
+	As a math idiot
+	I want to be told the sum of two numbers</pre>
+                </div>
+            <table class="testEvents">
+                    <tr>
+            <th>Test</th>
+        <th colspan="2">Success rate</th>
+        <th>Tests</th>
+        <th>Succeeded</th>
+        <th>Failed</th>
+        <th>Pending</th>
+        <th>Ignored</th>
+        <th>Skipped</th>
+            <th>Duration</th>
+    </tr>
+
+                    <tr>
+                        <td>
+                                    <a href="#t1736698513.0">Scenario: Divide Two Numbers at UI level, Number is positive, 18</a>
+
+                        </td>
+                        
+                            <td>
+            100%
+    </td>
+    <td>
+        <table class="timelineview" cellpadding="0" cellspacing="0">
+            <tr>
+                    <td>
+                        <a class="bar colorSucceeded" 
+                           style="width: 199px;" 
+                           title="1 succeeded" 
+                                                   />
+                    </td>
+            </tr>
+            
+        </table>
+    </td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+        <td>00:00:16.4910093</td>
+
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                                    <a href="#t-1465947259.0">Scenario: Divide Two Numbers at UI level, Number is positive, 32.60</a>
+
+                        </td>
+                        
+                            <td>
+            100%
+    </td>
+    <td>
+        <table class="timelineview" cellpadding="0" cellspacing="0">
+            <tr>
+                    <td>
+                        <a class="bar colorSucceeded" 
+                           style="width: 199px;" 
+                           title="1 succeeded" 
+                                                   />
+                    </td>
+            </tr>
+            
+        </table>
+    </td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+        <td>00:00:11.1149768</td>
+
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                                    <a href="#t1092053826.0">Scenario: Divide Two Numbers at UI level, Number is positive, 10.45</a>
+
+                        </td>
+                        
+                            <td>
+            100%
+    </td>
+    <td>
+        <table class="timelineview" cellpadding="0" cellspacing="0">
+            <tr>
+                    <td>
+                        <a class="bar colorSucceeded" 
+                           style="width: 199px;" 
+                           title="1 succeeded" 
+                                                   />
+                    </td>
+            </tr>
+            
+        </table>
+    </td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+        <td>00:00:12.0476149</td>
+
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                                    <a href="#t-858346488.0">Scenario: Divide Two Numbers at UI level, Number is negative, 0</a>
+
+                        </td>
+                        
+                            <td>
+            100%
+    </td>
+    <td>
+        <table class="timelineview" cellpadding="0" cellspacing="0">
+            <tr>
+                    <td>
+                        <a class="bar colorSucceeded" 
+                           style="width: 199px;" 
+                           title="1 succeeded" 
+                                                   />
+                    </td>
+            </tr>
+            
+        </table>
+    </td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+        <td>00:00:11.0381779</td>
+
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                                    <a href="#t-858346425.0">Scenario: Divide Two Numbers at UI level, Number is negative, A</a>
+
+                        </td>
+                        
+                            <td>
+            100%
+    </td>
+    <td>
+        <table class="timelineview" cellpadding="0" cellspacing="0">
+            <tr>
+                    <td>
+                        <a class="bar colorSucceeded" 
+                           style="width: 199px;" 
+                           title="1 succeeded" 
+                                                   />
+                    </td>
+            </tr>
+            
+        </table>
+    </td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+        <td>00:00:11.2393311</td>
+
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                                    <a href="#t-857232341.0">Scenario: Divide Two Numbers at UI level, Number is negative, -1</a>
+
+                        </td>
+                        
+                            <td>
+            100%
+    </td>
+    <td>
+        <table class="timelineview" cellpadding="0" cellspacing="0">
+            <tr>
+                    <td>
+                        <a class="bar colorSucceeded" 
+                           style="width: 199px;" 
+                           title="1 succeeded" 
+                                                   />
+                    </td>
+            </tr>
+            
+        </table>
+    </td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+        <td>00:00:13.4593274</td>
+
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                                    <a href="#t637774988.0">Scenario: Divide Two Numbers at Api level, Number is positive, 24</a>
+
+                        </td>
+                        
+                            <td>
+            0%
+    </td>
+    <td>
+        <table class="timelineview" cellpadding="0" cellspacing="0">
+            <tr>
+                    <td>
+                        <a class="bar colorFailed" 
+                           style="width: 199px;" 
+                           title="1 failed" 
+                                                          href="#error_summary"
+                        />
+                    </td>
+            </tr>
+            
+        </table>
+    </td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+        <td>00:00:11.0094023</td>
+
+                        
+                    </tr>
+            </table>
+
+        <h2>Execution Details</h2>
+            <a name="t1736698513.0" />
+            <h3>Scenario: Divide Two Numbers at UI level, Number is positive, 18 (in UI.Tests, CalculatorFeature)</h3>
+                <div class="description">
+                    tags: Browser_Chrome, UILevel
+                </div>
+            <ul>
+                <li>Status: Succeeded</li>
+                <li>Start time: 09/07/2018 10:01:41</li>
+                <li>Execution time (sec): 16.4910093</li>
+                <li>Thread: #0</li>
+            </ul>
+            <table class="testEvents">
+                <tr>
+                    <th>Steps</th>
+                    <th>Trace</th>
+                    <th>Result</th>
+                </tr>
+                    <tr>
+                        <td>
+                            <pre class="log"></pre>
+                        </td>
+                        <td>
+                            <!-- [Initialization: Feature - CalculatorFeature] -->
+                            <pre class="log">-&gt; Using app.config</pre>
+                        </td>
+                        <td>Succeeded in 1.735s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">Given I navigated to /</pre>
+                        </td>
+                        <td>
+                            <!-- [TestArrange: Scenario - Divide Two Numbers at UI level, Number is positive, 18] -->
+                            <pre class="log">done: Browser.GivenINavigatedTo(&quot;/&quot;) (8.7s)
+SCREENSHOT[ <a href='../tmpFC77.jpg'>tmpFC77.jpg</a> ]SCREENSHOT</pre>
+                        </td>
+                        <td>Succeeded in 9.972s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">And I have entered 18 into Numerator calculator</pre>
+                        </td>
+                        <td>
+                            <!-- [TestArrange: Scenario - Divide Two Numbers at UI level, Number is positive, 18] -->
+                            <pre class="log">done: CalculatorFeatureSteps.GivenIHaveEnteredIntoTheCalculator(&quot;18&quot;, &quot;Numerator&quot;) (0.3s)
+SCREENSHOT[ <a href='../tmp7F.jpg'>tmp7F.jpg</a> ]SCREENSHOT</pre>
+                        </td>
+                        <td>Succeeded in 0.953s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">And I have entered 3 into Denominator calculator</pre>
+                        </td>
+                        <td>
+                            <!-- [TestArrange: Scenario - Divide Two Numbers at UI level, Number is positive, 18] -->
+                            <pre class="log">done: CalculatorFeatureSteps.GivenIHaveEnteredIntoTheCalculator(&quot;3&quot;, &quot;Denominator&quot;) (0.2s)
+SCREENSHOT[ <a href='../tmp3AD.jpg'>tmp3AD.jpg</a> ]SCREENSHOT</pre>
+                        </td>
+                        <td>Succeeded in 0.812s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">When I press divide</pre>
+                        </td>
+                        <td>
+                            <!-- [TestAct: Scenario - Divide Two Numbers at UI level, Number is positive, 18] -->
+                            <pre class="log">done: CalculatorFeatureSteps.WhenIPressDivide() (0.4s)
+SCREENSHOT[ <a href='../tmp7B5.jpg'>tmp7B5.jpg</a> ]SCREENSHOT</pre>
+                        </td>
+                        <td>Succeeded in 1.055s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">Then the result should be 6 on the screen</pre>
+                        </td>
+                        <td>
+                            <!-- [TestAssert: Scenario - Divide Two Numbers at UI level, Number is positive, 18] -->
+                            <pre class="log">done: CalculatorFeatureSteps.ThenTheResultShouldBeOnTheScreen(6) (0.3s)
+SCREENSHOT[ <a href='../tmpB40.jpg'>tmpB40.jpg</a> ]SCREENSHOT</pre>
+                        </td>
+                        <td>Succeeded in 0.893s</td>
+                    </tr>
+            </table>
+            <a name="t-1465947259.0" />
+            <h3>Scenario: Divide Two Numbers at UI level, Number is positive, 32.60 (in UI.Tests, CalculatorFeature)</h3>
+                <div class="description">
+                    tags: Browser_Chrome, UILevel
+                </div>
+            <ul>
+                <li>Status: Succeeded</li>
+                <li>Start time: 09/07/2018 10:01:57</li>
+                <li>Execution time (sec): 11.1149768</li>
+                <li>Thread: #0</li>
+            </ul>
+            <table class="testEvents">
+                <tr>
+                    <th>Steps</th>
+                    <th>Trace</th>
+                    <th>Result</th>
+                </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">Given I navigated to /</pre>
+                        </td>
+                        <td>
+                            <!-- [TestArrange: Scenario - Divide Two Numbers at UI level, Number is positive, 32.60] -->
+                            <pre class="log">done: Browser.GivenINavigatedTo(&quot;/&quot;) (6.3s)
+SCREENSHOT[ <a href='../tmp2A62.jpg'>tmp2A62.jpg</a> ]SCREENSHOT</pre>
+                        </td>
+                        <td>Succeeded in 6.874s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">And I have entered 32.60 into Numerator calculator</pre>
+                        </td>
+                        <td>
+                            <!-- [TestArrange: Scenario - Divide Two Numbers at UI level, Number is positive, 32.60] -->
+                            <pre class="log">done: CalculatorFeatureSteps.GivenIHaveEnteredIntoTheCalculator(&quot;32.60&quot;, &quot;Numerator&quot;) (0.4s)
+SCREENSHOT[ <a href='../tmp2E1C.jpg'>tmp2E1C.jpg</a> ]SCREENSHOT</pre>
+                        </td>
+                        <td>Succeeded in 0.975s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">And I have entered 2.00 into Denominator calculator</pre>
+                        </td>
+                        <td>
+                            <!-- [TestArrange: Scenario - Divide Two Numbers at UI level, Number is positive, 32.60] -->
+                            <pre class="log">done: CalculatorFeatureSteps.GivenIHaveEnteredIntoTheCalculator(&quot;2.00&quot;, &quot;Denominator&quot;) (0.3s)
+SCREENSHOT[ <a href='../tmp31A8.jpg'>tmp31A8.jpg</a> ]SCREENSHOT</pre>
+                        </td>
+                        <td>Succeeded in 0.89s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">When I press divide</pre>
+                        </td>
+                        <td>
+                            <!-- [TestAct: Scenario - Divide Two Numbers at UI level, Number is positive, 32.60] -->
+                            <pre class="log">done: CalculatorFeatureSteps.WhenIPressDivide() (0.4s)
+SCREENSHOT[ <a href='../tmp3581.jpg'>tmp3581.jpg</a> ]SCREENSHOT</pre>
+                        </td>
+                        <td>Succeeded in 0.967s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">Then the result should be 16.30 on the screen</pre>
+                        </td>
+                        <td>
+                            <!-- [TestAssert: Scenario - Divide Two Numbers at UI level, Number is positive, 32.60] -->
+                            <pre class="log">done: CalculatorFeatureSteps.ThenTheResultShouldBeOnTheScreen(16.3) (0.2s)
+SCREENSHOT[ <a href='../tmp3880.jpg'>tmp3880.jpg</a> ]SCREENSHOT</pre>
+                        </td>
+                        <td>Succeeded in 0.789s</td>
+                    </tr>
+            </table>
+            <a name="t1092053826.0" />
+            <h3>Scenario: Divide Two Numbers at UI level, Number is positive, 10.45 (in UI.Tests, CalculatorFeature)</h3>
+                <div class="description">
+                    tags: Browser_Chrome, UILevel
+                </div>
+            <ul>
+                <li>Status: Succeeded</li>
+                <li>Start time: 09/07/2018 10:02:08</li>
+                <li>Execution time (sec): 12.0476149</li>
+                <li>Thread: #0</li>
+            </ul>
+            <table class="testEvents">
+                <tr>
+                    <th>Steps</th>
+                    <th>Trace</th>
+                    <th>Result</th>
+                </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">Given I navigated to /</pre>
+                        </td>
+                        <td>
+                            <!-- [TestArrange: Scenario - Divide Two Numbers at UI level, Number is positive, 10.45] -->
+                            <pre class="log">done: Browser.GivenINavigatedTo(&quot;/&quot;) (6.9s)
+SCREENSHOT[ <a href='../tmp585D.jpg'>tmp585D.jpg</a> ]SCREENSHOT</pre>
+                        </td>
+                        <td>Succeeded in 7.555s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">And I have entered 10.45 into Numerator calculator</pre>
+                        </td>
+                        <td>
+                            <!-- [TestArrange: Scenario - Divide Two Numbers at UI level, Number is positive, 10.45] -->
+                            <pre class="log">done: CalculatorFeatureSteps.GivenIHaveEnteredIntoTheCalculator(&quot;10.45&quot;, &quot;Numerator&quot;) (0.4s)
+SCREENSHOT[ <a href='../tmp5C36.jpg'>tmp5C36.jpg</a> ]SCREENSHOT</pre>
+                        </td>
+                        <td>Succeeded in 0.99s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">And I have entered 2.3509 into Denominator calculator</pre>
+                        </td>
+                        <td>
+                            <!-- [TestArrange: Scenario - Divide Two Numbers at UI level, Number is positive, 10.45] -->
+                            <pre class="log">done: CalculatorFeatureSteps.GivenIHaveEnteredIntoTheCalculator(&quot;2.3509&quot;, &quot;Denominator&quot;) (0.3s)
+SCREENSHOT[ <a href='../tmp601F.jpg'>tmp601F.jpg</a> ]SCREENSHOT</pre>
+                        </td>
+                        <td>Succeeded in 0.953s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">When I press divide</pre>
+                        </td>
+                        <td>
+                            <!-- [TestAct: Scenario - Divide Two Numbers at UI level, Number is positive, 10.45] -->
+                            <pre class="log">done: CalculatorFeatureSteps.WhenIPressDivide() (0.4s)
+SCREENSHOT[ <a href='../tmp63F9.jpg'>tmp63F9.jpg</a> ]SCREENSHOT</pre>
+                        </td>
+                        <td>Succeeded in 1.017s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">Then the result should be 4.4451061295674 on the screen</pre>
+                        </td>
+                        <td>
+                            <!-- [TestAssert: Scenario - Divide Two Numbers at UI level, Number is positive, 10.45] -->
+                            <pre class="log">done: CalculatorFeatureSteps.ThenTheResultShouldBeOnTheScreen(4.4451061295674) (0.2s)
+SCREENSHOT[ <a href='../tmp6726.jpg'>tmp6726.jpg</a> ]SCREENSHOT</pre>
+                        </td>
+                        <td>Succeeded in 0.825s</td>
+                    </tr>
+            </table>
+            <a name="t-858346488.0" />
+            <h3>Scenario: Divide Two Numbers at UI level, Number is negative, 0 (in UI.Tests, CalculatorFeature)</h3>
+                <div class="description">
+                    tags: Browser_Chrome, UILevel
+                </div>
+            <ul>
+                <li>Status: Succeeded</li>
+                <li>Start time: 09/07/2018 10:02:20</li>
+                <li>Execution time (sec): 11.0381779</li>
+                <li>Thread: #0</li>
+            </ul>
+            <table class="testEvents">
+                <tr>
+                    <th>Steps</th>
+                    <th>Trace</th>
+                    <th>Result</th>
+                </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">Given I navigated to /</pre>
+                        </td>
+                        <td>
+                            <!-- [TestArrange: Scenario - Divide Two Numbers at UI level, Number is negative, 0] -->
+                            <pre class="log">done: Browser.GivenINavigatedTo(&quot;/&quot;) (6.2s)
+SCREENSHOT[ <a href='../tmp84B2.jpg'>tmp84B2.jpg</a> ]SCREENSHOT</pre>
+                        </td>
+                        <td>Succeeded in 6.827s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">And I have entered 0 into Numerator calculator</pre>
+                        </td>
+                        <td>
+                            <!-- [TestArrange: Scenario - Divide Two Numbers at UI level, Number is negative, 0] -->
+                            <pre class="log">done: CalculatorFeatureSteps.GivenIHaveEnteredIntoTheCalculator(&quot;0&quot;, &quot;Numerator&quot;) (0.3s)
+SCREENSHOT[ <a href='../tmp881E.jpg'>tmp881E.jpg</a> ]SCREENSHOT</pre>
+                        </td>
+                        <td>Succeeded in 0.861s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">And I have entered 0 into Denominator calculator</pre>
+                        </td>
+                        <td>
+                            <!-- [TestArrange: Scenario - Divide Two Numbers at UI level, Number is negative, 0] -->
+                            <pre class="log">done: CalculatorFeatureSteps.GivenIHaveEnteredIntoTheCalculator(&quot;0&quot;, &quot;Denominator&quot;) (0.3s)
+SCREENSHOT[ <a href='../tmp8BC8.jpg'>tmp8BC8.jpg</a> ]SCREENSHOT</pre>
+                        </td>
+                        <td>Succeeded in 0.997s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">When I press divide</pre>
+                        </td>
+                        <td>
+                            <!-- [TestAct: Scenario - Divide Two Numbers at UI level, Number is negative, 0] -->
+                            <pre class="log">done: CalculatorFeatureSteps.WhenIPressDivide() (0.4s)
+SCREENSHOT[ <a href='../tmp8FD0.jpg'>tmp8FD0.jpg</a> ]SCREENSHOT</pre>
+                        </td>
+                        <td>Succeeded in 0.974s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">Then the result should be NaN on the screen</pre>
+                        </td>
+                        <td>
+                            <!-- [TestAssert: Scenario - Divide Two Numbers at UI level, Number is negative, 0] -->
+                            <pre class="log">done: CalculatorFeatureSteps.ThenTheResultShouldBeOnTheScreen(NaN) (0.1s)
+SCREENSHOT[ <a href='../tmp92A0.jpg'>tmp92A0.jpg</a> ]SCREENSHOT</pre>
+                        </td>
+                        <td>Succeeded in 0.717s</td>
+                    </tr>
+            </table>
+            <a name="t-858346425.0" />
+            <h3>Scenario: Divide Two Numbers at UI level, Number is negative, A (in UI.Tests, CalculatorFeature)</h3>
+                <div class="description">
+                    tags: Browser_Chrome, UILevel
+                </div>
+            <ul>
+                <li>Status: Succeeded</li>
+                <li>Start time: 09/07/2018 10:02:31</li>
+                <li>Execution time (sec): 11.2393311</li>
+                <li>Thread: #0</li>
+            </ul>
+            <table class="testEvents">
+                <tr>
+                    <th>Steps</th>
+                    <th>Trace</th>
+                    <th>Result</th>
+                </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">Given I navigated to /</pre>
+                        </td>
+                        <td>
+                            <!-- [TestArrange: Scenario - Divide Two Numbers at UI level, Number is negative, A] -->
+                            <pre class="log">done: Browser.GivenINavigatedTo(&quot;/&quot;) (6.2s)
+SCREENSHOT[ <a href='../tmpAFED.jpg'>tmpAFED.jpg</a> ]SCREENSHOT</pre>
+                        </td>
+                        <td>Succeeded in 6.853s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">And I have entered A into Numerator calculator</pre>
+                        </td>
+                        <td>
+                            <!-- [TestArrange: Scenario - Divide Two Numbers at UI level, Number is negative, A] -->
+                            <pre class="log">done: CalculatorFeatureSteps.GivenIHaveEnteredIntoTheCalculator(&quot;A&quot;, &quot;Numerator&quot;) (0.3s)
+SCREENSHOT[ <a href='../tmpB3B7.jpg'>tmpB3B7.jpg</a> ]SCREENSHOT</pre>
+                        </td>
+                        <td>Succeeded in 0.96s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">And I have entered B into Denominator calculator</pre>
+                        </td>
+                        <td>
+                            <!-- [TestArrange: Scenario - Divide Two Numbers at UI level, Number is negative, A] -->
+                            <pre class="log">done: CalculatorFeatureSteps.GivenIHaveEnteredIntoTheCalculator(&quot;B&quot;, &quot;Denominator&quot;) (0.3s)
+SCREENSHOT[ <a href='../tmpB752.jpg'>tmpB752.jpg</a> ]SCREENSHOT</pre>
+                        </td>
+                        <td>Succeeded in 0.916s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">When I press divide</pre>
+                        </td>
+                        <td>
+                            <!-- [TestAct: Scenario - Divide Two Numbers at UI level, Number is negative, A] -->
+                            <pre class="log">done: CalculatorFeatureSteps.WhenIPressDivide() (0.5s)
+SCREENSHOT[ <a href='../tmpBB79.jpg'>tmpBB79.jpg</a> ]SCREENSHOT</pre>
+                        </td>
+                        <td>Succeeded in 1.065s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">Then the result should be NaN on the screen</pre>
+                        </td>
+                        <td>
+                            <!-- [TestAssert: Scenario - Divide Two Numbers at UI level, Number is negative, A] -->
+                            <pre class="log">done: CalculatorFeatureSteps.ThenTheResultShouldBeOnTheScreen(NaN) (0.2s)
+SCREENSHOT[ <a href='../tmpBE78.jpg'>tmpBE78.jpg</a> ]SCREENSHOT</pre>
+                        </td>
+                        <td>Succeeded in 0.778s</td>
+                    </tr>
+            </table>
+            <a name="t-857232341.0" />
+            <h3>Scenario: Divide Two Numbers at UI level, Number is negative, -1 (in UI.Tests, CalculatorFeature)</h3>
+                <div class="description">
+                    tags: Browser_Chrome, UILevel
+                </div>
+            <ul>
+                <li>Status: Succeeded</li>
+                <li>Start time: 09/07/2018 10:02:43</li>
+                <li>Execution time (sec): 13.4593274</li>
+                <li>Thread: #0</li>
+            </ul>
+            <table class="testEvents">
+                <tr>
+                    <th>Steps</th>
+                    <th>Trace</th>
+                    <th>Result</th>
+                </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">Given I navigated to /</pre>
+                        </td>
+                        <td>
+                            <!-- [TestArrange: Scenario - Divide Two Numbers at UI level, Number is negative, -1] -->
+                            <pre class="log">done: Browser.GivenINavigatedTo(&quot;/&quot;) (8.5s)
+SCREENSHOT[ <a href='../tmpE4BE.jpg'>tmpE4BE.jpg</a> ]SCREENSHOT</pre>
+                        </td>
+                        <td>Succeeded in 9.171s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">And I have entered -1 into Numerator calculator</pre>
+                        </td>
+                        <td>
+                            <!-- [TestArrange: Scenario - Divide Two Numbers at UI level, Number is negative, -1] -->
+                            <pre class="log">done: CalculatorFeatureSteps.GivenIHaveEnteredIntoTheCalculator(&quot;-1&quot;, &quot;Numerator&quot;) (0.4s)
+SCREENSHOT[ <a href='../tmpE897.jpg'>tmpE897.jpg</a> ]SCREENSHOT</pre>
+                        </td>
+                        <td>Succeeded in 0.943s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">And I have entered 0 into Denominator calculator</pre>
+                        </td>
+                        <td>
+                            <!-- [TestArrange: Scenario - Divide Two Numbers at UI level, Number is negative, -1] -->
+                            <pre class="log">done: CalculatorFeatureSteps.GivenIHaveEnteredIntoTheCalculator(&quot;0&quot;, &quot;Denominator&quot;) (0.4s)
+SCREENSHOT[ <a href='../tmpEC61.jpg'>tmpEC61.jpg</a> ]SCREENSHOT</pre>
+                        </td>
+                        <td>Succeeded in 0.995s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">When I press divide</pre>
+                        </td>
+                        <td>
+                            <!-- [TestAct: Scenario - Divide Two Numbers at UI level, Number is negative, -1] -->
+                            <pre class="log">done: CalculatorFeatureSteps.WhenIPressDivide() (0.3s)
+SCREENSHOT[ <a href='../tmpF088.jpg'>tmpF088.jpg</a> ]SCREENSHOT</pre>
+                        </td>
+                        <td>Succeeded in 1.027s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">Then the result should be -∞ on the screen</pre>
+                        </td>
+                        <td>
+                            <!-- [TestAssert: Scenario - Divide Two Numbers at UI level, Number is negative, -1] -->
+                            <pre class="log">done: CalculatorFeatureSteps.ThenTheResultShouldBeOnTheScreen(-∞) (0.2s)
+SCREENSHOT[ <a href='../tmpF3B6.jpg'>tmpF3B6.jpg</a> ]SCREENSHOT</pre>
+                        </td>
+                        <td>Succeeded in 0.8s</td>
+                    </tr>
+            </table>
+            <a name="t637774988.0" />
+            <h3>Scenario: Divide Two Numbers at Api level, Number is positive, 24 (in UI.Tests, CalculatorFeature)</h3>
+                <div class="description">
+                    tags: Browser_Chrome, APILevel
+                </div>
+            <ul>
+                <li>Status: Failed</li>
+                <li>Start time: 09/07/2018 10:02:56</li>
+                <li>Execution time (sec): 11.0094023</li>
+                <li>Thread: #0</li>
+                <li>Error: Object reference not set to an instance of an object.</li>
+            </ul>
+            <table class="testEvents">
+                <tr>
+                    <th>Steps</th>
+                    <th>Trace</th>
+                    <th>Result</th>
+                </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">Given I navigated to /</pre>
+                        </td>
+                        <td>
+                            <!-- [TestArrange: Scenario - Divide Two Numbers at Api level, Number is positive, 24] -->
+                            <pre class="log">done: Browser.GivenINavigatedTo(&quot;/&quot;) (6.2s)
+SCREENSHOT[ <a href='../tmp1067.jpg'>tmp1067.jpg</a> ]SCREENSHOT</pre>
+                        </td>
+                        <td>Succeeded in 6.85s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">And I have entered 24 into Numerator calculator</pre>
+                        </td>
+                        <td>
+                            <!-- [TestArrange: Scenario - Divide Two Numbers at Api level, Number is positive, 24] -->
+                            <pre class="log">done: CalculatorFeatureStepsAPI.GivenIHaveEnteredIntoTheCalculator(&quot;24&quot;, &quot;Numerator&quot;) (0.7s)
+SCREENSHOT[ <a href='../tmp15B7.jpg'>tmp15B7.jpg</a> ]SCREENSHOT</pre>
+                        </td>
+                        <td>Succeeded in 1.355s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">And I have entered 6 into Denominator calculator</pre>
+                        </td>
+                        <td>
+                            <!-- [TestArrange: Scenario - Divide Two Numbers at Api level, Number is positive, 24] -->
+                            <pre class="log">done: CalculatorFeatureStepsAPI.GivenIHaveEnteredIntoTheCalculator(&quot;6&quot;, &quot;Denominator&quot;) (0.3s)
+SCREENSHOT[ <a href='../tmp1942.jpg'>tmp1942.jpg</a> ]SCREENSHOT</pre>
+                        </td>
+                        <td>Succeeded in 0.87s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">When I press divide</pre>
+                        </td>
+                        <td>
+                            <!-- [TestAct: Scenario - Divide Two Numbers at Api level, Number is positive, 24] -->
+                            <pre class="log">done: CalculatorFeatureStepsAPI.WhenIPressDivide() (0.0s)
+SCREENSHOT[ <a href='../tmp1B66.jpg'>tmp1B66.jpg</a> ]SCREENSHOT</pre>
+                        </td>
+                        <td>Succeeded in 0.569s</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre class="log">Then the result should be 4 on the screen</pre>
+                        </td>
+                        <td>
+                            <!-- [TestAssert: Scenario - Divide Two Numbers at Api level, Number is positive, 24] -->
+                            <pre class="log">error: Object reference not set to an instance of an object.
+SCREENSHOT[ <a href='../tmp1E17.jpg'>tmp1E17.jpg</a> ]SCREENSHOT</pre>
+                                <div class="errorMessage">Object reference not set to an instance of an object.</div>
+                                <pre class="stackTrace">System.NullReferenceException: Object reference not set to an instance of an object.
+   at UI.Tests.Drivers.Steps.CalculatorFeatureStepsAPI.ThenTheResultShouldBeOnTheScreen(Double p0) in K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\UI.Tests\Steps\CalculatorFeatureStepsAPI.cs:line 68
+   at lambda_method(Closure , IContextManager , Double )
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
+   at TechTalk.SpecRun.SpecFlowPlugin.Runtime.RunnerTestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
+   at UI.Tests.Features.CalculatorFeatureFeature.ScenarioCleanup()
+   at UI.Tests.Features.CalculatorFeatureFeature.DivideTwoNumbersAtApiLevel(String number1, String number2, String result, String[] exampleTags) in K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\UI.Tests\Features\CalculatorFeature.feature:line 36
+   at UI.Tests.Features.CalculatorFeatureFeature.DivideTwoNumbersAtApiLevel_NumberIsPositive_24() in K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\UI.Tests\Features\CalculatorFeature.feature:line 31
+   at TechTalk.SpecRun.Framework.TaskExecutors.StaticOrInstanceMethodExecutor.ExecuteInternal(ITestThreadExecutionContext testThreadExecutionContext)
+   at TechTalk.SpecRun.Framework.TaskExecutors.StaticOrInstanceMethodExecutor.Execute(ITestThreadExecutionContext testThreadExecutionContext)
+   at TechTalk.SpecRun.Framework.TestAssemblyExecutor.ExecuteTestNodeTask(TestNode testNode, ITaskExecutor task, TraceEventType eventType)</pre>
+                        </td>
+                        <td>Failed in 0.695s</td>
+                    </tr>
+            </table>
+	</body>
+</html>

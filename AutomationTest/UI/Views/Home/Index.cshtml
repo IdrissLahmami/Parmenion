@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Parmenion Calculator</h1>
+     <div>
+         <form action="/" method="post">
+             <input type="text" id="Numerator" name="Numerator" /> /
+             <input type="text" id="Denominator" name="Denominator" />
+             <input type="submit" value="Divide" id="Submit" />         
+             <div id="result">
+                 @ViewData["Result"]
+             </div>
+         </form>
+     </div>
+</div>

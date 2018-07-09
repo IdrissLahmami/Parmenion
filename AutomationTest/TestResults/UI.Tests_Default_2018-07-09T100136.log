@@ -1,0 +1,233 @@
+﻿2018-07-09T10:01:36.3868290+01:00;VSTestExecutionThread;Info;SpecFlow+Runner execution started
+2018-07-09T10:01:36.9058620+01:00;VSTestExecutionThread;Info;SpecRun: running tests in K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\UI.Tests\bin\Debug\UI.Tests.dll
+2018-07-09T10:01:36.9077844+01:00;VSTestExecutionThread;Info;Profile: Default
+2018-07-09T10:01:37.1858009+01:00;Thread#13;Info;Discovering target: IE
+2018-07-09T10:01:37.1868010+01:00;Thread#13;Info;Discovering tests from assembly: K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\UI.Tests\bin\Debug\UI.Tests.dll
+Appdomain Disposed
+2018-07-09T10:01:38.8179050+01:00;Thread#13;Info;Discovering target: Chrome
+2018-07-09T10:01:38.8179050+01:00;Thread#13;Info;Discovering tests from assembly: K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\UI.Tests\bin\Debug\UI.Tests.dll
+Appdomain Disposed
+2018-07-09T10:01:39.0309173+01:00;Thread#13;Info;Discovering target: Firefox
+2018-07-09T10:01:39.0309173+01:00;Thread#13;Info;Discovering tests from assembly: K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\UI.Tests\bin\Debug\UI.Tests.dll
+Appdomain Disposed
+Test Suite Dump
+#0: UI.Tests/Default - 
+#12: Chrome - 
+#13: UI.Tests - 
+#14: CalculatorFeature - 
+#15: Divide Two Numbers at UI level, Number is positive, 18 - Target:Chrome/TestAssembly:UI.Tests/Feature:CalculatorFeature/Scenario:Divide+Two+Numbers+at+UI+level%2c+Number+is+positive%2c+18
+#16: Divide Two Numbers at UI level, Number is positive, 32.60 - Target:Chrome/TestAssembly:UI.Tests/Feature:CalculatorFeature/Scenario:Divide+Two+Numbers+at+UI+level%2c+Number+is+positive%2c+32.60
+#17: Divide Two Numbers at UI level, Number is positive, 10.45 - Target:Chrome/TestAssembly:UI.Tests/Feature:CalculatorFeature/Scenario:Divide+Two+Numbers+at+UI+level%2c+Number+is+positive%2c+10.45
+#18: Divide Two Numbers at UI level, Number is negative, 0 - Target:Chrome/TestAssembly:UI.Tests/Feature:CalculatorFeature/Scenario:Divide+Two+Numbers+at+UI+level%2c+Number+is+negative%2c+0
+#19: Divide Two Numbers at UI level, Number is negative, A - Target:Chrome/TestAssembly:UI.Tests/Feature:CalculatorFeature/Scenario:Divide+Two+Numbers+at+UI+level%2c+Number+is+negative%2c+A
+#20: Divide Two Numbers at UI level, Number is negative, -1 - Target:Chrome/TestAssembly:UI.Tests/Feature:CalculatorFeature/Scenario:Divide+Two+Numbers+at+UI+level%2c+Number+is+negative%2c+-1
+#21: Divide Two Numbers at Api level, Number is positive, 24 - Target:Chrome/TestAssembly:UI.Tests/Feature:CalculatorFeature/Scenario:Divide+Two+Numbers+at+Api+level%2c+Number+is+positive%2c+24
+End: Test Suite Dump
+Thread#0:Scheduler: get next test for thread 0
+Thread#:Scheduler: testitem #15 from normal test queue 
+Thread#0:Scheduler: considering testitem #15 for thread 0
+Thread#0:TestItem#15:testItemMatchesCurrentTestThread:UnSpecific
+Thread#0:TestItem#15:runsOnOneOtherThreadSpecific:False
+Thread#0:TestItem#15:runsOnOneOtherThreadUnspecific:False
+Thread#0:Scheduler: using testitem #15 for thread 0
+Thread#0:Scheduler: Test #15 is scheduled for thread
+Thread#0:Scheduler: with testItemExecutionIndex 0
+Thread #0: creating new test thread executor for UI.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null (target: Chrome)
+IIS Express started, PID: 18584, Port: 51077
+Executing test executor at 'K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\packages\SpecRun.Runner.1.7.0\tools\TechTalk.SpecRun.Framework.Executor.x86.clr40.exe'
+Loading SpecRun type 'TechTalk.SpecRun.Framework.TestAssemblyExecutor' from: K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\packages\SpecRun.Runner.1.7.0\tools\TechTalk.SpecRun.Framework.Executor.dll
+OutProcTestAssemblyExecutorSink: initialized for K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\UI.Tests\bin\Debug\UI.Tests.dll on test thread #0
+OutProcTestAssemblyExecutorSink: running tests...
+Thread#0: Test #15/0 is started on thread #0
+Thread#0:T:-> Using app.config
+Thread#0:B:Given I navigated to /
+Thread#0:T:done: Browser.GivenINavigatedTo("/") (8.7s)
+Thread#0:T:SCREENSHOT[ file:///K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\TestResults\tmpFC77.jpg ]SCREENSHOT
+Thread#0:B:And I have entered 18 into Numerator calculator
+Thread#0:T:done: CalculatorFeatureSteps.GivenIHaveEnteredIntoTheCalculator("18", "Numerator") (0.3s)
+Thread#0:T:SCREENSHOT[ file:///K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\TestResults\tmp7F.jpg ]SCREENSHOT
+Thread#0:B:And I have entered 3 into Denominator calculator
+Thread#0:T:done: CalculatorFeatureSteps.GivenIHaveEnteredIntoTheCalculator("3", "Denominator") (0.2s)
+Thread#0:T:SCREENSHOT[ file:///K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\TestResults\tmp3AD.jpg ]SCREENSHOT
+Thread#0:B:When I press divide
+Thread#0:T:done: CalculatorFeatureSteps.WhenIPressDivide() (0.4s)
+Thread#0:T:SCREENSHOT[ file:///K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\TestResults\tmp7B5.jpg ]SCREENSHOT
+Thread#0:B:Then the result should be 6 on the screen
+Thread#0:T:done: CalculatorFeatureSteps.ThenTheResultShouldBeOnTheScreen(6) (0.3s)
+Thread#0:T:SCREENSHOT[ file:///K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\TestResults\tmpB40.jpg ]SCREENSHOT
+Thread#0:Scheduler: get next test for thread 0
+Thread#:Scheduler: testitem #16 from normal test queue 
+Thread#0:Scheduler: considering testitem #16 for thread 0
+Thread#0:TestItem#16:testItemMatchesCurrentTestThread:UnSpecific
+Thread#0:TestItem#16:runsOnOneOtherThreadSpecific:False
+Thread#0:TestItem#16:runsOnOneOtherThreadUnspecific:False
+Thread#0:Scheduler: using testitem #16 for thread 0
+Thread#0:Scheduler: Test #16 is scheduled for thread
+Thread#0:Scheduler: with testItemExecutionIndex 0
+Thread#0: Test #15/0 is finished on thread #0 as Succeeded within 16.4910093 seconds
+Thread#0: Test #16/0 is started on thread #0
+Thread#0:B:Given I navigated to /
+Thread#0:T:done: Browser.GivenINavigatedTo("/") (6.3s)
+Thread#0:T:SCREENSHOT[ file:///K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\TestResults\tmp2A62.jpg ]SCREENSHOT
+Thread#0:B:And I have entered 32.60 into Numerator calculator
+Thread#0:T:done: CalculatorFeatureSteps.GivenIHaveEnteredIntoTheCalculator("32.60", "Numerator") (0.4s)
+Thread#0:T:SCREENSHOT[ file:///K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\TestResults\tmp2E1C.jpg ]SCREENSHOT
+Thread#0:B:And I have entered 2.00 into Denominator calculator
+Thread#0:T:done: CalculatorFeatureSteps.GivenIHaveEnteredIntoTheCalculator("2.00", "Denominator") (0.3s)
+Thread#0:T:SCREENSHOT[ file:///K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\TestResults\tmp31A8.jpg ]SCREENSHOT
+Thread#0:B:When I press divide
+Thread#0:T:done: CalculatorFeatureSteps.WhenIPressDivide() (0.4s)
+Thread#0:T:SCREENSHOT[ file:///K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\TestResults\tmp3581.jpg ]SCREENSHOT
+Thread#0:B:Then the result should be 16.30 on the screen
+Thread#0:T:done: CalculatorFeatureSteps.ThenTheResultShouldBeOnTheScreen(16.3) (0.2s)
+Thread#0:T:SCREENSHOT[ file:///K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\TestResults\tmp3880.jpg ]SCREENSHOT
+Thread#0:Scheduler: get next test for thread 0
+Thread#:Scheduler: testitem #17 from normal test queue 
+Thread#0:Scheduler: considering testitem #17 for thread 0
+Thread#0:TestItem#17:testItemMatchesCurrentTestThread:UnSpecific
+Thread#0:TestItem#17:runsOnOneOtherThreadSpecific:False
+Thread#0:TestItem#17:runsOnOneOtherThreadUnspecific:False
+Thread#0:Scheduler: using testitem #17 for thread 0
+Thread#0:Scheduler: Test #17 is scheduled for thread
+Thread#0:Scheduler: with testItemExecutionIndex 0
+Thread#0: Test #16/0 is finished on thread #0 as Succeeded within 11.1149768 seconds
+Thread#0: Test #17/0 is started on thread #0
+Thread#0:B:Given I navigated to /
+Thread#0:T:done: Browser.GivenINavigatedTo("/") (6.9s)
+Thread#0:T:SCREENSHOT[ file:///K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\TestResults\tmp585D.jpg ]SCREENSHOT
+Thread#0:B:And I have entered 10.45 into Numerator calculator
+Thread#0:T:done: CalculatorFeatureSteps.GivenIHaveEnteredIntoTheCalculator("10.45", "Numerator") (0.4s)
+Thread#0:T:SCREENSHOT[ file:///K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\TestResults\tmp5C36.jpg ]SCREENSHOT
+Thread#0:B:And I have entered 2.3509 into Denominator calculator
+Thread#0:T:done: CalculatorFeatureSteps.GivenIHaveEnteredIntoTheCalculator("2.3509", "Denominator") (0.3s)
+Thread#0:T:SCREENSHOT[ file:///K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\TestResults\tmp601F.jpg ]SCREENSHOT
+Thread#0:B:When I press divide
+Thread#0:T:done: CalculatorFeatureSteps.WhenIPressDivide() (0.4s)
+Thread#0:T:SCREENSHOT[ file:///K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\TestResults\tmp63F9.jpg ]SCREENSHOT
+Thread#0:B:Then the result should be 4.4451061295674 on the screen
+Thread#0:T:done: CalculatorFeatureSteps.ThenTheResultShouldBeOnTheScreen(4.4451061295674) (0.2s)
+Thread#0:T:SCREENSHOT[ file:///K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\TestResults\tmp6726.jpg ]SCREENSHOT
+Thread#0:Scheduler: get next test for thread 0
+Thread#:Scheduler: testitem #18 from normal test queue 
+Thread#0:Scheduler: considering testitem #18 for thread 0
+Thread#0:TestItem#18:testItemMatchesCurrentTestThread:UnSpecific
+Thread#0:TestItem#18:runsOnOneOtherThreadSpecific:False
+Thread#0:TestItem#18:runsOnOneOtherThreadUnspecific:False
+Thread#0:Scheduler: using testitem #18 for thread 0
+Thread#0:Scheduler: Test #18 is scheduled for thread
+Thread#0:Scheduler: with testItemExecutionIndex 0
+Thread#0: Test #17/0 is finished on thread #0 as Succeeded within 12.0476149 seconds
+Thread#0: Test #18/0 is started on thread #0
+Thread#0:B:Given I navigated to /
+Thread#0:T:done: Browser.GivenINavigatedTo("/") (6.2s)
+Thread#0:T:SCREENSHOT[ file:///K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\TestResults\tmp84B2.jpg ]SCREENSHOT
+Thread#0:B:And I have entered 0 into Numerator calculator
+Thread#0:T:done: CalculatorFeatureSteps.GivenIHaveEnteredIntoTheCalculator("0", "Numerator") (0.3s)
+Thread#0:T:SCREENSHOT[ file:///K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\TestResults\tmp881E.jpg ]SCREENSHOT
+Thread#0:B:And I have entered 0 into Denominator calculator
+Thread#0:T:done: CalculatorFeatureSteps.GivenIHaveEnteredIntoTheCalculator("0", "Denominator") (0.3s)
+Thread#0:T:SCREENSHOT[ file:///K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\TestResults\tmp8BC8.jpg ]SCREENSHOT
+Thread#0:B:When I press divide
+Thread#0:T:done: CalculatorFeatureSteps.WhenIPressDivide() (0.4s)
+Thread#0:T:SCREENSHOT[ file:///K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\TestResults\tmp8FD0.jpg ]SCREENSHOT
+Thread#0:B:Then the result should be NaN on the screen
+Thread#0:T:done: CalculatorFeatureSteps.ThenTheResultShouldBeOnTheScreen(NaN) (0.1s)
+Thread#0:T:SCREENSHOT[ file:///K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\TestResults\tmp92A0.jpg ]SCREENSHOT
+Thread#0:Scheduler: get next test for thread 0
+Thread#:Scheduler: testitem #19 from normal test queue 
+Thread#0:Scheduler: considering testitem #19 for thread 0
+Thread#0:TestItem#19:testItemMatchesCurrentTestThread:UnSpecific
+Thread#0:TestItem#19:runsOnOneOtherThreadSpecific:False
+Thread#0:TestItem#19:runsOnOneOtherThreadUnspecific:False
+Thread#0:Scheduler: using testitem #19 for thread 0
+Thread#0:Scheduler: Test #19 is scheduled for thread
+Thread#0:Scheduler: with testItemExecutionIndex 0
+Thread#0: Test #18/0 is finished on thread #0 as Succeeded within 11.0381779 seconds
+Thread#0: Test #19/0 is started on thread #0
+Thread#0:B:Given I navigated to /
+Thread#0:T:done: Browser.GivenINavigatedTo("/") (6.2s)
+Thread#0:T:SCREENSHOT[ file:///K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\TestResults\tmpAFED.jpg ]SCREENSHOT
+Thread#0:B:And I have entered A into Numerator calculator
+Thread#0:T:done: CalculatorFeatureSteps.GivenIHaveEnteredIntoTheCalculator("A", "Numerator") (0.3s)
+Thread#0:T:SCREENSHOT[ file:///K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\TestResults\tmpB3B7.jpg ]SCREENSHOT
+Thread#0:B:And I have entered B into Denominator calculator
+Thread#0:T:done: CalculatorFeatureSteps.GivenIHaveEnteredIntoTheCalculator("B", "Denominator") (0.3s)
+Thread#0:T:SCREENSHOT[ file:///K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\TestResults\tmpB752.jpg ]SCREENSHOT
+Thread#0:B:When I press divide
+Thread#0:T:done: CalculatorFeatureSteps.WhenIPressDivide() (0.5s)
+Thread#0:T:SCREENSHOT[ file:///K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\TestResults\tmpBB79.jpg ]SCREENSHOT
+Thread#0:B:Then the result should be NaN on the screen
+Thread#0:T:done: CalculatorFeatureSteps.ThenTheResultShouldBeOnTheScreen(NaN) (0.2s)
+Thread#0:T:SCREENSHOT[ file:///K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\TestResults\tmpBE78.jpg ]SCREENSHOT
+Thread#0:Scheduler: get next test for thread 0
+Thread#:Scheduler: testitem #20 from normal test queue 
+Thread#0:Scheduler: considering testitem #20 for thread 0
+Thread#0:TestItem#20:testItemMatchesCurrentTestThread:UnSpecific
+Thread#0:TestItem#20:runsOnOneOtherThreadSpecific:False
+Thread#0:TestItem#20:runsOnOneOtherThreadUnspecific:False
+Thread#0:Scheduler: using testitem #20 for thread 0
+Thread#0:Scheduler: Test #20 is scheduled for thread
+Thread#0:Scheduler: with testItemExecutionIndex 0
+Thread#0: Test #19/0 is finished on thread #0 as Succeeded within 11.2393311 seconds
+Thread#0: Test #20/0 is started on thread #0
+Thread#0:B:Given I navigated to /
+Thread#0:T:done: Browser.GivenINavigatedTo("/") (8.5s)
+Thread#0:T:SCREENSHOT[ file:///K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\TestResults\tmpE4BE.jpg ]SCREENSHOT
+Thread#0:B:And I have entered -1 into Numerator calculator
+Thread#0:T:done: CalculatorFeatureSteps.GivenIHaveEnteredIntoTheCalculator("-1", "Numerator") (0.4s)
+Thread#0:T:SCREENSHOT[ file:///K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\TestResults\tmpE897.jpg ]SCREENSHOT
+Thread#0:B:And I have entered 0 into Denominator calculator
+Thread#0:T:done: CalculatorFeatureSteps.GivenIHaveEnteredIntoTheCalculator("0", "Denominator") (0.4s)
+Thread#0:T:SCREENSHOT[ file:///K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\TestResults\tmpEC61.jpg ]SCREENSHOT
+Thread#0:B:When I press divide
+Thread#0:T:done: CalculatorFeatureSteps.WhenIPressDivide() (0.3s)
+Thread#0:T:SCREENSHOT[ file:///K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\TestResults\tmpF088.jpg ]SCREENSHOT
+Thread#0:B:Then the result should be -∞ on the screen
+Thread#0:T:done: CalculatorFeatureSteps.ThenTheResultShouldBeOnTheScreen(-∞) (0.2s)
+Thread#0:T:SCREENSHOT[ file:///K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\TestResults\tmpF3B6.jpg ]SCREENSHOT
+Thread#0:Scheduler: get next test for thread 0
+Thread#:Scheduler: testitem #21 from normal test queue 
+Thread#0:Scheduler: considering testitem #21 for thread 0
+Thread#0:TestItem#21:testItemMatchesCurrentTestThread:UnSpecific
+Thread#0:TestItem#21:runsOnOneOtherThreadSpecific:False
+Thread#0:TestItem#21:runsOnOneOtherThreadUnspecific:False
+Thread#0:Scheduler: using testitem #21 for thread 0
+Thread#0:Scheduler: Test #21 is scheduled for thread
+Thread#0:Scheduler: with testItemExecutionIndex 0
+Thread#0: Test #20/0 is finished on thread #0 as Succeeded within 13.4593274 seconds
+Thread#0: Test #21/0 is started on thread #0
+Thread#0:B:Given I navigated to /
+Thread#0:T:done: Browser.GivenINavigatedTo("/") (6.2s)
+Thread#0:T:SCREENSHOT[ file:///K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\TestResults\tmp1067.jpg ]SCREENSHOT
+Thread#0:B:And I have entered 24 into Numerator calculator
+Thread#0:T:done: CalculatorFeatureStepsAPI.GivenIHaveEnteredIntoTheCalculator("24", "Numerator") (0.7s)
+Thread#0:T:SCREENSHOT[ file:///K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\TestResults\tmp15B7.jpg ]SCREENSHOT
+Thread#0:B:And I have entered 6 into Denominator calculator
+Thread#0:T:done: CalculatorFeatureStepsAPI.GivenIHaveEnteredIntoTheCalculator("6", "Denominator") (0.3s)
+Thread#0:T:SCREENSHOT[ file:///K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\TestResults\tmp1942.jpg ]SCREENSHOT
+Thread#0:B:When I press divide
+Thread#0:T:done: CalculatorFeatureStepsAPI.WhenIPressDivide() (0.0s)
+Thread#0:T:SCREENSHOT[ file:///K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\TestResults\tmp1B66.jpg ]SCREENSHOT
+Thread#0:B:Then the result should be 4 on the screen
+Thread#0:T:error: Object reference not set to an instance of an object.
+Thread#0:T:SCREENSHOT[ file:///K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\TestResults\tmp1E17.jpg ]SCREENSHOT
+Thread#0:TestItem#21:Scheduler: reschedule tests for testitem #21
+Thread#0:Scheduler: get next test for thread 0
+Thread#:Scheduler: at the end of normal test queue
+Thread#0:Scheduler: enumerator for thread is at end
+Thread#0:Scheduler: No more tests for thread
+Thread#0: Test #21/0 is finished on thread #0 as Failed within 11.0094023 seconds
+Error restoring deployment step 'IISExpress': Cannot process request because the process (18584) has exited.
+   at System.Diagnostics.Process.GetProcessHandle(Int32 access, Boolean throwIfExited)
+   at System.Diagnostics.Process.Kill()
+   at TechTalk.SpecRun.Framework.DeploymentSteps.IISExpressStep.Restore(DeploymentContext deploymentContext)
+   at TechTalk.SpecRun.Framework.DeploymentSteps.DeploymentContext.Restore(DeploymentTransformationSteps steps, ITestRunTracerBroker tracerBroker)
+Thread#-1:Scheduler: get next test for thread -1
+Thread#:Scheduler: at the end of normal test queue
+Thread#-1:Scheduler: enumerator for thread is at end
+Total: 7
+Succeeded: 6
+Ignored: 0
+Pending: 0
+Skipped: 0
+Failed: 1

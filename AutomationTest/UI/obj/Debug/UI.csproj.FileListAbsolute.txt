@@ -1,0 +1,431 @@
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\ApplicationInsights.config
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\roslyn\csc.exe
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\roslyn\Microsoft.CodeAnalysis.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\roslyn\Microsoft.CSharp.Core.targets
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\roslyn\System.Collections.Immutable.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\roslyn\System.Reflection.Metadata.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\roslyn\vbc.exe
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\roslyn\VBCSCompiler.exe
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\roslyn\VBCSCompiler.exe.config
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\UI.dll.config
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\UI.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\UI.pdb
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\Antlr3.Runtime.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\Microsoft.AI.Agent.Intercept.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\Microsoft.AI.DependencyCollector.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\Microsoft.AI.PerfCounterCollector.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\Microsoft.AI.ServerTelemetryChannel.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\Microsoft.AI.Web.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\Microsoft.AI.WindowsServer.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\Microsoft.ApplicationInsights.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\Microsoft.Web.Infrastructure.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\Newtonsoft.Json.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\System.Diagnostics.DiagnosticSource.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\System.Web.Helpers.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\System.Web.Mvc.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\System.Web.Optimization.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\System.Web.Razor.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\System.Web.WebPages.Deployment.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\System.Web.WebPages.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\System.Web.WebPages.Razor.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\WebGrease.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\Microsoft.AI.DependencyCollector.xml
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\Microsoft.AI.ServerTelemetryChannel.xml
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\Microsoft.AI.Web.xml
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\Microsoft.AI.WindowsServer.xml
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\Microsoft.ApplicationInsights.xml
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\System.Diagnostics.DiagnosticSource.xml
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\System.Web.Helpers.xml
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\System.Web.Mvc.xml
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\System.Web.Optimization.xml
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\System.Web.Razor.xml
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\System.Web.WebPages.xml
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\System.Web.WebPages.Deployment.xml
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\System.Web.WebPages.Razor.xml
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\Antlr3.Runtime.pdb
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\bin\Newtonsoft.Json.xml
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\obj\Debug\UI.csproj.CopyComplete
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\obj\Debug\UI.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI\obj\Debug\UI.pdb
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\ApplicationInsights.config
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\roslyn\csc.exe
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\roslyn\Microsoft.CodeAnalysis.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\roslyn\Microsoft.CSharp.Core.targets
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\roslyn\System.Collections.Immutable.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\roslyn\System.Reflection.Metadata.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\roslyn\vbc.exe
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\roslyn\VBCSCompiler.exe
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\roslyn\VBCSCompiler.exe.config
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\UI.dll.config
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\UI.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\UI.pdb
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\Antlr3.Runtime.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\Microsoft.AI.Agent.Intercept.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\Microsoft.AI.DependencyCollector.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\Microsoft.AI.PerfCounterCollector.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\Microsoft.AI.ServerTelemetryChannel.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\Microsoft.AI.Web.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\Microsoft.AI.WindowsServer.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\Microsoft.ApplicationInsights.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\Microsoft.Web.Infrastructure.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\Newtonsoft.Json.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\System.Diagnostics.DiagnosticSource.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\System.Web.Helpers.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\System.Web.Mvc.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\System.Web.Optimization.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\System.Web.Razor.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\System.Web.WebPages.Deployment.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\System.Web.WebPages.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\System.Web.WebPages.Razor.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\WebGrease.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\Microsoft.AI.DependencyCollector.xml
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\Microsoft.AI.ServerTelemetryChannel.xml
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\Microsoft.AI.Web.xml
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\Microsoft.AI.WindowsServer.xml
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\Microsoft.ApplicationInsights.xml
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\System.Diagnostics.DiagnosticSource.xml
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\System.Web.Helpers.xml
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\System.Web.Mvc.xml
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\System.Web.Optimization.xml
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\System.Web.Razor.xml
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\System.Web.WebPages.xml
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\System.Web.WebPages.Deployment.xml
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\System.Web.WebPages.Razor.xml
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\Antlr3.Runtime.pdb
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\bin\Newtonsoft.Json.xml
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\obj\Debug\UI.csproj.CopyComplete
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\obj\Debug\UI.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI\obj\Debug\UI.pdb
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\roslyn\csc.exe
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\roslyn\System.Collections.Immutable.dll
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\roslyn\System.Reflection.Metadata.dll
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\roslyn\VBCSCompiler.exe
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\ApplicationInsights.config
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\roslyn\vbc.exe
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\roslyn\VBCSCompiler.exe.config
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\UI.dll.config
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\UI.dll
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\UI.pdb
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\Antlr3.Runtime.dll
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\Microsoft.AI.Agent.Intercept.dll
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\Microsoft.AI.DependencyCollector.dll
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\Microsoft.AI.Web.dll
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\Microsoft.AI.WindowsServer.dll
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\Microsoft.ApplicationInsights.dll
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\Microsoft.Web.Infrastructure.dll
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\Newtonsoft.Json.dll
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\System.Diagnostics.DiagnosticSource.dll
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\System.Web.Helpers.dll
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\System.Web.Mvc.dll
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\System.Web.Optimization.dll
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\System.Web.Razor.dll
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\System.Web.WebPages.Deployment.dll
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\System.Web.WebPages.dll
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\System.Web.WebPages.Razor.dll
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\WebGrease.dll
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\Microsoft.AI.DependencyCollector.xml
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\Microsoft.AI.Web.xml
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\Microsoft.AI.WindowsServer.xml
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\Microsoft.ApplicationInsights.xml
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\System.Diagnostics.DiagnosticSource.xml
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\System.Web.Helpers.xml
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\System.Web.Mvc.xml
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\System.Web.Optimization.xml
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\System.Web.Razor.xml
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\System.Web.WebPages.xml
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\System.Web.WebPages.Deployment.xml
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\System.Web.WebPages.Razor.xml
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\Antlr3.Runtime.pdb
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\bin\Newtonsoft.Json.xml
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\obj\Debug\UI.csproj.CopyComplete
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\obj\Debug\UI.dll
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI\obj\Debug\UI.pdb
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\ApplicationInsights.config
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\Default.srprofile
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\roslyn\csc.exe
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\roslyn\System.Collections.Immutable.dll
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\roslyn\System.Reflection.Metadata.dll
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\roslyn\vbc.exe
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\roslyn\VBCSCompiler.exe
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\roslyn\VBCSCompiler.exe.config
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\UI.dll.config
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\UI.dll
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\UI.pdb
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\Antlr3.Runtime.dll
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\Microsoft.AI.Agent.Intercept.dll
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\Microsoft.AI.DependencyCollector.dll
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\Microsoft.AI.Web.dll
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\Microsoft.AI.WindowsServer.dll
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\Microsoft.ApplicationInsights.dll
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\Microsoft.Web.Infrastructure.dll
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\Newtonsoft.Json.dll
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\SpecRun.SpecFlowPlugin.dll
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\System.Diagnostics.DiagnosticSource.dll
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\System.ValueTuple.dll
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\System.Web.Helpers.dll
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\System.Web.Mvc.dll
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\System.Web.Optimization.dll
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\System.Web.Razor.dll
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\System.Web.WebPages.Deployment.dll
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\System.Web.WebPages.dll
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\System.Web.WebPages.Razor.dll
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\TechTalk.SpecFlow.dll
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\TechTalk.SpecRun.Common.dll
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\TechTalk.SpecRun.dll
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\WebGrease.dll
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\Microsoft.AI.DependencyCollector.xml
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\Microsoft.AI.Web.xml
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\Microsoft.AI.WindowsServer.xml
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\Microsoft.ApplicationInsights.xml
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\Newtonsoft.Json.xml
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\System.Diagnostics.DiagnosticSource.xml
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\System.Web.Helpers.xml
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\System.Web.Mvc.xml
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\System.Web.Optimization.xml
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\System.Web.Razor.xml
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\System.Web.WebPages.xml
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\System.Web.WebPages.Deployment.xml
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\System.Web.WebPages.Razor.xml
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\bin\Antlr3.Runtime.pdb
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\obj\Debug\UI.csproj.CopyComplete
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\obj\Debug\UI.dll
+E:\TRYTHIS\Automation\Source\UI.Automation\UI\obj\Debug\UI.pdb
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\ApplicationInsights.config
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\Default.srprofile
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\roslyn\csc.exe
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\roslyn\System.Collections.Immutable.dll
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\roslyn\System.Reflection.Metadata.dll
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\roslyn\vbc.exe
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\roslyn\VBCSCompiler.exe
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\roslyn\VBCSCompiler.exe.config
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\UI.dll.config
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\UI.dll
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\UI.pdb
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\Antlr3.Runtime.dll
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\Microsoft.AI.Agent.Intercept.dll
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\Microsoft.AI.DependencyCollector.dll
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\Microsoft.AI.Web.dll
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\Microsoft.AI.WindowsServer.dll
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\Microsoft.ApplicationInsights.dll
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\Microsoft.Web.Infrastructure.dll
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\Newtonsoft.Json.dll
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\SpecRun.SpecFlowPlugin.dll
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\System.Diagnostics.DiagnosticSource.dll
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\System.ValueTuple.dll
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\System.Web.Helpers.dll
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\System.Web.Mvc.dll
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\System.Web.Optimization.dll
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\System.Web.Razor.dll
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\System.Web.WebPages.Deployment.dll
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\System.Web.WebPages.dll
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\System.Web.WebPages.Razor.dll
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\TechTalk.SpecFlow.dll
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\TechTalk.SpecRun.Common.dll
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\TechTalk.SpecRun.dll
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\WebGrease.dll
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\Microsoft.AI.DependencyCollector.xml
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\Microsoft.AI.Web.xml
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\Microsoft.AI.WindowsServer.xml
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\Microsoft.ApplicationInsights.xml
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\Newtonsoft.Json.xml
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\System.Diagnostics.DiagnosticSource.xml
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\System.Web.Helpers.xml
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\System.Web.Mvc.xml
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\System.Web.Optimization.xml
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\System.Web.Razor.xml
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\System.Web.WebPages.xml
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\System.Web.WebPages.Deployment.xml
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\System.Web.WebPages.Razor.xml
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\bin\Antlr3.Runtime.pdb
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\obj\Debug\UI.csprojAssemblyReference.cache
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\obj\Debug\UI.csproj.CopyComplete
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\obj\Debug\UI.dll
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI\obj\Debug\UI.pdb
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\ApplicationInsights.config
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\Default.srprofile
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\roslyn\csc.exe
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\roslyn\System.Collections.Immutable.dll
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\roslyn\System.Reflection.Metadata.dll
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\roslyn\vbc.exe
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\roslyn\VBCSCompiler.exe
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\roslyn\VBCSCompiler.exe.config
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\UI.dll.config
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\UI.dll
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\UI.pdb
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\Antlr3.Runtime.dll
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\Microsoft.AI.Agent.Intercept.dll
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\Microsoft.AI.DependencyCollector.dll
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\Microsoft.AI.Web.dll
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\Microsoft.AI.WindowsServer.dll
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\Microsoft.ApplicationInsights.dll
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\Microsoft.Web.Infrastructure.dll
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\Newtonsoft.Json.dll
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\SpecRun.SpecFlowPlugin.dll
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\System.Diagnostics.DiagnosticSource.dll
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\System.ValueTuple.dll
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\System.Web.Helpers.dll
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\System.Web.Mvc.dll
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\System.Web.Optimization.dll
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\System.Web.Razor.dll
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\System.Web.WebPages.Deployment.dll
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\System.Web.WebPages.dll
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\System.Web.WebPages.Razor.dll
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\TechTalk.SpecFlow.dll
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\TechTalk.SpecRun.Common.dll
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\TechTalk.SpecRun.dll
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\WebGrease.dll
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\Microsoft.AI.DependencyCollector.xml
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\Microsoft.AI.Web.xml
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\Microsoft.AI.WindowsServer.xml
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\Microsoft.ApplicationInsights.xml
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\Newtonsoft.Json.xml
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\System.Diagnostics.DiagnosticSource.xml
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\System.Web.Helpers.xml
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\System.Web.Mvc.xml
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\System.Web.Optimization.xml
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\System.Web.Razor.xml
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\System.Web.WebPages.xml
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\System.Web.WebPages.Deployment.xml
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\System.Web.WebPages.Razor.xml
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\bin\Antlr3.Runtime.pdb
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\obj\Debug\UI.csproj.CopyComplete
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\obj\Debug\UI.dll
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI\obj\Debug\UI.pdb
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\ApplicationInsights.config
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\Default.srprofile
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\roslyn\csc.exe
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\roslyn\System.Collections.Immutable.dll
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\roslyn\System.Reflection.Metadata.dll
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\roslyn\vbc.exe
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\roslyn\VBCSCompiler.exe
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\roslyn\VBCSCompiler.exe.config
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\UI.dll.config
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\UI.dll
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\UI.pdb
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\Antlr3.Runtime.dll
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\Microsoft.AI.Agent.Intercept.dll
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\Microsoft.AI.DependencyCollector.dll
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\Microsoft.AI.Web.dll
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\Microsoft.AI.WindowsServer.dll
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\Microsoft.ApplicationInsights.dll
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\Microsoft.Web.Infrastructure.dll
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\Newtonsoft.Json.dll
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\SpecRun.SpecFlowPlugin.dll
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\System.Diagnostics.DiagnosticSource.dll
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\System.ValueTuple.dll
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\System.Web.Helpers.dll
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\System.Web.Mvc.dll
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\System.Web.Optimization.dll
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\System.Web.Razor.dll
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\System.Web.WebPages.Deployment.dll
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\System.Web.WebPages.dll
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\System.Web.WebPages.Razor.dll
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\TechTalk.SpecFlow.dll
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\TechTalk.SpecRun.Common.dll
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\TechTalk.SpecRun.dll
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\WebGrease.dll
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\Microsoft.AI.DependencyCollector.xml
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\Microsoft.AI.Web.xml
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\Microsoft.AI.WindowsServer.xml
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\Microsoft.ApplicationInsights.xml
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\Newtonsoft.Json.xml
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\System.Diagnostics.DiagnosticSource.xml
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\System.Web.Helpers.xml
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\System.Web.Mvc.xml
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\System.Web.Optimization.xml
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\System.Web.Razor.xml
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\System.Web.WebPages.xml
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\System.Web.WebPages.Deployment.xml
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\System.Web.WebPages.Razor.xml
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\bin\Antlr3.Runtime.pdb
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\obj\Debug\UI.csproj.CopyComplete
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\obj\Debug\UI.dll
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI\obj\Debug\UI.pdb

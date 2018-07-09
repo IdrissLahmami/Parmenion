@@ -1,0 +1,61 @@
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI.Automation\bin\Debug\UI.Automation.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI.Automation\bin\Debug\UI.Automation.pdb
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI.Automation\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI.Automation\obj\Debug\UI.Automation.csproj.CoreCompileInputs.cache
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI.Automation\obj\Debug\UI.Automation.csproj.CopyComplete
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI.Automation\obj\Debug\UI.Automation.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation1\Source\UI.Automation\UI.Automation\obj\Debug\UI.Automation.pdb
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI.Automation\bin\Debug\UI.Automation.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI.Automation\bin\Debug\UI.Automation.pdb
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI.Automation\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI.Automation\obj\Debug\UI.Automation.csproj.CoreCompileInputs.cache
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI.Automation\obj\Debug\UI.Automation.csproj.CopyComplete
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI.Automation\obj\Debug\UI.Automation.dll
+K:\Users\Administrator\Documents\GitHub\Parmenion\AutomationTest\Automation\Source\UI.Automation\UI.Automation\obj\Debug\UI.Automation.pdb
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI.Automation\bin\Debug\UI.Automation.dll
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI.Automation\bin\Debug\UI.Automation.pdb
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI.Automation\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI.Automation\obj\Debug\UI.Automation.csproj.CoreCompileInputs.cache
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI.Automation\obj\Debug\UI.Automation.csproj.CopyComplete
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI.Automation\obj\Debug\UI.Automation.dll
+E:\BACKUP\AutomationTest\Automation\Source\UI.Automation\UI.Automation\obj\Debug\UI.Automation.pdb
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI.Automation\bin\Debug\UI.Automation.dll.config
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI.Automation\bin\Debug\UI.Automation.dll
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI.Automation\bin\Debug\UI.Automation.pdb
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI.Automation\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI.Automation\bin\Debug\SpecRun.SpecFlowPlugin.dll
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI.Automation\bin\Debug\System.ValueTuple.dll
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI.Automation\bin\Debug\TechTalk.SpecFlow.dll
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI.Automation\bin\Debug\TechTalk.SpecRun.Common.dll
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI.Automation\bin\Debug\TechTalk.SpecRun.dll
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI.Automation\obj\Debug\UI.Automation.csprojAssemblyReference.cache
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI.Automation\obj\Debug\UI.Automation.csproj.CoreCompileInputs.cache
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI.Automation\obj\Debug\UI.Automation.csproj.CopyComplete
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI.Automation\obj\Debug\UI.Automation.dll
+E:\TRYTHIS\Automation - Copy (4)\Source\UI.Automation\UI.Automation\obj\Debug\UI.Automation.pdb
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI.Automation\bin\Debug\UI.Automation.dll.config
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI.Automation\bin\Debug\UI.Automation.dll
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI.Automation\bin\Debug\UI.Automation.pdb
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI.Automation\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI.Automation\bin\Debug\SpecRun.SpecFlowPlugin.dll
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI.Automation\bin\Debug\System.ValueTuple.dll
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI.Automation\bin\Debug\TechTalk.SpecFlow.dll
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI.Automation\bin\Debug\TechTalk.SpecRun.Common.dll
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI.Automation\bin\Debug\TechTalk.SpecRun.dll
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI.Automation\obj\Debug\UI.Automation.csproj.CoreCompileInputs.cache
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI.Automation\obj\Debug\UI.Automation.csproj.CopyComplete
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI.Automation\obj\Debug\UI.Automation.dll
+E:\TRYTHIS\Automation - Copy (4)1\Source\UI.Automation\UI.Automation\obj\Debug\UI.Automation.pdb
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI.Automation\bin\Debug\UI.Automation.dll.config
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI.Automation\bin\Debug\UI.Automation.dll
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI.Automation\bin\Debug\UI.Automation.pdb
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI.Automation\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI.Automation\bin\Debug\SpecRun.SpecFlowPlugin.dll
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI.Automation\bin\Debug\System.ValueTuple.dll
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI.Automation\bin\Debug\TechTalk.SpecFlow.dll
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI.Automation\bin\Debug\TechTalk.SpecRun.Common.dll
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI.Automation\bin\Debug\TechTalk.SpecRun.dll
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI.Automation\obj\Debug\UI.Automation.csproj.CoreCompileInputs.cache
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI.Automation\obj\Debug\UI.Automation.csproj.CopyComplete
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI.Automation\obj\Debug\UI.Automation.dll
+E:\TRYTHIS\FINISHED\New\Automation\Source\UI.Automation\UI.Automation\obj\Debug\UI.Automation.pdb
